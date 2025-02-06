@@ -10,7 +10,7 @@ function TVPage() {
     <>
     <Hero/>
     <Pod/>
-    <Every/>
+    <Every/> 
     <Around/>
     <Screen/>
 
