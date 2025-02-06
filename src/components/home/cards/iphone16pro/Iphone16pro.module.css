@@ -1,0 +1,33 @@
+.Iphone16pro {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.Iphone16pro img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .Iphone16pro {
+        font-size: 2rem; 
+        padding: 3%;
+    }
+
+    .Iphone16pro img {
+        max-height: 300px; 
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Iphone16pro {
+        font-size: 1.5rem; 
+        padding: 4%;
+    }
+
+    .Iphone16pro img {
+        max-height: 200px; 
+        width: 100%;
+    }
+}

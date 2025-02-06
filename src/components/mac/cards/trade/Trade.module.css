@@ -1,0 +1,95 @@
+.body {
+    padding: 0 60px;
+}
+
+.Trade {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.imageContainer {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out text and image */
+    position: relative;
+    scroll-snap-align: start;
+    border-radius: 20px;
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
+}
+
+.imageContainer img {
+    width: 560px; /* Default image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+}
+
+/* Responsive design */
+
+/* For screens smaller than 1024px (tablets and medium devices) */
+@media screen and (max-width: 1024px) {
+    .imageContainer {
+        flex-direction: column; /* Stack image and text vertically */
+        height: auto; /* Adjust container height */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .imageContainer img {
+        width: 300px; /* Adjust image width */
+        margin-bottom: 20px; /* Add spacing below image */
+    }
+
+    .imageText {
+        font-size: 36px; /* Reduce text size */
+        text-align: center; /* Center-align text */
+    }
+
+    .imageText span {
+        font-size: 16px; /* Reduce nested text size */
+    }
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media screen and (max-width: 768px) {
+
+    .Trade{
+        font-size: 20px;
+    }
+    .imageContainer {
+        padding: 15px; /* Further reduce padding */
+        gap: 15px; /* Adjust gap between elements */
+    }
+
+    .imageContainer img {
+        width: 250px; /* Adjust image size for smaller screens */
+    }
+
+    .imageText {
+        font-size: 28px; /* Further reduce text size */
+    }
+
+    .imageText span {
+        font-size: 14px; /* Further reduce nested text size */
+    }
+}
+
+/* For screens smaller than 480px (small mobile devices) */
+@media screen and (max-width: 480px) {
+    .imageContainer {
+        padding: 10px; /* Minimal padding for small screens */
+    }
+
+    .imageContainer img {
+        width: 200px; /* Further reduce image width */
+    }
+
+    .imageText {
+        font-size: 24px; /* Smaller font size for text */
+    }
+
+    .imageText span {
+        font-size: 12px; /* Smaller font size for nested text */
+    }
+}

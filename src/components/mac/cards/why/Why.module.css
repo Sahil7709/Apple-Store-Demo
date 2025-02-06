@@ -1,0 +1,130 @@
+.Why {
+    display: flex;
+    align-items: center;
+    margin: 4%;
+    padding: 0px 10px; 
+    font-size: 44px;
+    font-weight: 600;
+}
+
+/* Card slider container styling */
+.cardSlider {
+    margin: 5px auto;
+    padding: 0px 10px; 
+    scroll-snap-type: x mandatory;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: auto;
+    gap: 1.5rem;
+    width: 90%;
+}
+
+/* Image container styling with an image on top-right and centered text */
+.imageContainer {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    scroll-snap-align: start;
+    width: 200px;
+    height: 200px;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px #00000014;
+    transition: transform 0.5s ease-in-out, box-shadow 1s ease-in-out;
+    overflow: hidden;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+}
+
+/* Styling for the image at the top-right */
+.imageContainer img {
+    position: absolute;
+    top: 10px; /* Position from the top */
+    left: 10px; /* Position from the right */
+    width: 50px; /* Adjust width */
+    height: 50px; /* Adjust height */
+    object-fit: contain; /* Ensure the image fits without distortion */
+}
+
+/* Apply hover effect to the image container */
+.imageContainer:hover {
+    transform: scale(1.05); /* Scale the entire container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add prominent shadow on hover */
+}
+
+/* Image text styling */
+.imageText {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    display: inline-block;
+    letter-spacing: inherit;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.19;
+    z-index: 1;
+}
+
+/* Hide scrollbar */
+.cardSlider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive adjustments */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .cardSlider {
+        gap: 3rem; /* Reduce gap */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .imageContainer {
+        width: 90%; /* Slightly narrower for better fit */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Adjust based on content */
+    }
+
+    .cardSlider img {
+        width: 100%; /* Ensure images remain full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .imageText {
+        font-size: 18px; /* Adjust font size for readability */
+    }
+
+    .Why {
+        font-size: 24px; /* Reduce font size */
+        padding: 10px 30px; /* Reduce padding */
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    .cardSlider {
+        gap: 2rem; /* Reduce gap further */
+        width: 100%; /* Full width for mobile screens */
+    }
+
+    .imageContainer {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Adjust based on content */
+    }
+
+    .cardSlider img {
+        width: 100%; /* Ensure images adjust to full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .imageText {
+        font-size: 16px; /* Reduce text size further */
+    }
+
+    .Why {
+        font-size: 20px; /* Further reduce font size */
+        padding: 10px 20px; /* Further reduce padding */
+    }
+}

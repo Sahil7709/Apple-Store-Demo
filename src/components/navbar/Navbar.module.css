@@ -1,0 +1,104 @@
+.Container {
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+    font-size: 14px;
+    padding: 0 20px; /* Reduced padding on sides */
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Ensure there's no extra margin */
+}
+
+/* Brand Name */
+.brand a {
+    text-decoration: none;
+    color: #1d1d1f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links for desktop */
+.links {
+    display: flex;
+    gap: 0.8rem; /* Reduced gap between links */
+}
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #1d1d1f;
+    padding:20px; /* Reduced padding */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+ 
+.links a:hover {
+    color: #858687;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Styles */
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+}
+
+.mobileMenu a {
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobileMenu a:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .links {
+        display: none; /* Hide links in desktop layout */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .mobileMenu {
+        display: none; /* Hide dropdown menu by default */
+    }
+
+    .mobileMenu.mobileMenu {
+        display: flex; /* Show dropdown menu when active */
+    }
+}

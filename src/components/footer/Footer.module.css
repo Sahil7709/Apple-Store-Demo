@@ -1,0 +1,103 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0px 0px;
+  gap: 20px;
+  padding: 5px 60px;
+  border-top: 0.2px black solid;
+  border-bottom: 0.2px black solid;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section {
+  flex: 1;
+  padding: 10px 0;
+  min-width: 250px;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section li {
+  margin-bottom: 5px;
+}
+
+/* Links styling */
+.section a {
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: color 0.3s;
+
+}
+
+.section a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.Copyright{
+  display: flex;
+  justify-content: center;
+  margin:10px;
+  padding: 20px;
+  align-items: center;
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    width: 80%; /* Adjust width for better fit */
+    text-align: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .Footer {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .section {
+    width: 90%; /* Full width with some margin */
+    text-align: center;
+  }
+
+  .section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small devices (mobile phones, ≤575px) */
+@media (max-width: 575px) {
+  .Footer {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .section {
+    min-width: 100%; /* Full width on small screens */
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  .section h3 {
+    font-size: 1rem;
+  }
+}

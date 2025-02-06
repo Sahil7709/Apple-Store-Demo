@@ -1,0 +1,14 @@
+
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

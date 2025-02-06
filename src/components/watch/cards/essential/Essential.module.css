@@ -1,0 +1,18 @@
+.Essential {
+
+    display: flex;
+    margin-top: 60px;
+    margin-left: 60px;
+    align-items: center;
+    font-size: 50px;
+}
+
+.image{
+    display: flex;
+    gap: 2rem;
+}
+
+.image img{
+    height: 600px;
+    width: 600px;
+}

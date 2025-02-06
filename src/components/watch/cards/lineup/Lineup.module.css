@@ -1,0 +1,15 @@
+.Lineup {
+
+    display: flex;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    align-items: center;
+    font-size: 50px;
+}
+
+.image{
+    display: flex;
+    height: 20%;
+    width: 20%;
+}

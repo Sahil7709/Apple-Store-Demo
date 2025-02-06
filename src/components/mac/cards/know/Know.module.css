@@ -1,0 +1,96 @@
+
+.Know{
+    display: flex;
+    align-items: center;
+    padding:60px;
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.cardSlider {
+    margin: 5px auto;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+    overflow-x: auto;
+    gap: 2rem;
+    width: 90%;
+}
+
+.imageContainer{
+    display: flex;
+    object-fit: cover;
+    position: relative;
+    scroll-snap-align: start;
+    width: 309px;
+    height: 500px;
+}
+
+.imageText{
+    position: absolute;
+    display: inline-block;
+    letter-spacing: inherit;
+    text-decoration:none;
+    color: #74747a;
+    margin-top: 0;
+    padding: 24px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.1904761905;
+}
+
+.cardSlider img {
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px #00000014;
+    width: 309px;
+    height: 500px;
+    transition: transform 0.5s ease-in-out, box-shadow 1s ease-in-out; /* Slow down the transition for smooth effect */
+}
+
+.imageContainer img:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+.cardSlider::-webkit-scrollbar {
+    display: none;
+} 
+
+@media screen and (max-width: 768px) {
+    .cardSlider {
+        gap: 1rem; /* Reduce gap on smaller screens */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .cardSlider img {
+        width: 70vw; /* Adjust image width for smaller screens */
+        height: auto; /* Adjust image height for smaller screens */
+    }
+
+    .imageText {
+        font-size: 18px; /* Adjust text size for smaller screens */
+    }
+
+    .Know {
+        font-size: 24px; /* Reduce font size on smaller screens */
+        padding: 10px 30px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardSlider img {
+        width: 80vw; /* Further adjust image width for very small screens */
+        height: auto; /* Further adjust image height for very small screens */
+    }
+
+    .imageText {
+        font-size: 16px; /* Reduce text size further */
+    }
+
+    .Know {
+        font-size: 20px; /* Further reduce font size */
+        padding: 10px 20px; /* Further reduce padding */
+    }
+}

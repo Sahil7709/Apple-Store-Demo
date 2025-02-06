@@ -1,0 +1,230 @@
+.Only {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #6e6e73;
+    text-align: center;
+}
+
+.only {
+    background: linear-gradient(to right, rgb(80, 80, 240), rgb(227, 48, 188), rgb(235, 61, 61));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Image Slider Wrapper */
+.imageSliderWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevent scroll outside the container */
+}
+
+.imageContainer {
+    flex: none;
+    scroll-snap-align: center;
+    border-radius: 18px;
+    width: 340px;
+    height: 450px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    position: relative;
+}
+
+/* Image Slider */
+.imageSlider {
+    display: flex;
+    gap: 6rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    width: 90%;
+}
+
+.imageSlider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Image inside Container */
+.image {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 18px;
+    position: relative; /* Needed for positioning text over the image */
+}
+
+.image img {
+    width: 100%;  
+    height: 100%; 
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Overlay on Image */
+.imageText {
+    position: absolute; /* Absolute positioning to place text over image */
+    top: 16%;
+    left: 40%;
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 21px;
+    font-weight: 600;
+    color: #1d1d1f;
+    line-height: 1.2;
+    z-index: 1; /* Ensure text stays above the image */
+}
+
+/* Section Group and Containers */
+.sectionGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.sectionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default to two columns for smaller screens and extra-small devices */
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Section Styles */
+.leftSection, .rightSection {
+    font-size: 28px;
+    line-height: 1.5;
+    height: 240px;
+    width: 360px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 2px 4px 12px #00000014;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.leftSection:hover, .rightSection:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Text */
+.Smile, .Pay {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #b8cbb8, #b465da, #cf6cc9, #ee609c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon {
+    position: absolute;
+    top: 50%; /* Position vertically at the middle */
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 4rem; /* Size of the arrows */
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+    color: #6e6e73;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Hover effect for arrows */
+.icon:hover {
+    opacity: 1;
+    color: #868484;
+}
+
+/* Hide arrows when not needed */
+.icon.hidden {
+    display: none;
+}
+
+/* Left arrow style */
+.leftArrow {
+    left: 30px; /* Position left arrow on the left side */
+}
+
+/* Right arrow style */
+.rightArrow {
+    right: 30px; /* Position right arrow on the right side */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .sectionContainer {
+        grid-template-columns: 1fr; /* Switch to single column for tablets */
+    }
+
+    .leftSection, .rightSection {
+        font-size: 20px;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sectionContainer {
+        grid-template-columns: 1fr; /* Single column for mobile devices */
+    }
+
+    .leftSection, .rightSection {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sectionContainer {
+        grid-template-columns: repeat(2, 1fr); /* Double columns for extra small screens */
+    }
+
+    .leftSection, .rightSection {
+        height: 160px;
+        width: 180px;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+
+    .Only {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .imageContainer {
+        width: 300px;
+        height: 240px;
+    }
+
+    .image {
+        width: 100%; 
+        height: auto;
+    }
+
+    .imageText {
+        font-size: 18px;
+        top: 30%;
+    }
+}

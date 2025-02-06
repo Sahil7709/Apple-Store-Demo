@@ -1,0 +1,12 @@
+.Section{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 10px;
+
+}
+
+.Section img{
+    height: 60%;
+    width: 60%;
+}

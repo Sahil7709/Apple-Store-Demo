@@ -1,0 +1,44 @@
+.hero {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem; 
+    text-align: center;
+    padding: 2%; 
+    background-color: black;
+}
+
+.hero img {
+    height: auto; 
+    max-width: 100%; 
+    border-radius: 10px;
+}
+
+.hero video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+/* Media Quries */
+@media (max-width: 768px) {
+    .hero {
+        font-size: 2rem; 
+        padding: 3%;
+    }
+
+    .hero img, .hero video {
+        max-height: 300px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        font-size: 1.5rem; 
+        padding: 4%;
+    }
+
+    .hero img, .hero video {
+        max-height: 200px; 
+    }
+}
